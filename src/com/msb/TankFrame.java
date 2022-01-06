@@ -11,6 +11,13 @@ import java.awt.event.WindowEvent;
  * @Version: 1.0
  */
 public class TankFrame extends Frame{
+    //重新绘制界面时，自动执行的函数。
+    @Override
+    public void paint(Graphics g) {   // Graphics看着画笔类。
+        System.out.println("paint");
+        g.fillRect(200,200,50,50);   // 前两个参数是x,y坐标。  后两个指定矩形宽高。 左上角为0,0
+    }
+
     public TankFrame() throws HeadlessException {
         setSize(800,600);
         setResizable(false);
