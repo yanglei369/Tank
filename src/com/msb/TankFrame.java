@@ -41,18 +41,13 @@ public class TankFrame extends Frame{
     public void paint(Graphics g) {   // Graphics看作画笔类。
         System.out.println("paint");
         g.fillRect(x,y,50,50);   // 前两个参数是x,y坐标。  后两个指定矩形宽高。 左上角为0,0
-        //x += 10;
-        //y += 10;
+        x += 10;
+        y += 10;
     }
     //内部类，不暴露给外面，只是自己用。
     class MyKeyListener extends KeyAdapter{
-        //实现按键就刷新。
         @Override
         public void keyPressed(KeyEvent e) {
-            //这里直接调用paint可以嘛？  不行，因为参数Graphics g不知道该怎么传。 这是系统给的，我们拿不到。
-            //按键实现刷新
-            x+=200;
-            repaint();       //自动调用paint方法。
             System.out.println("KEY Pressed");
         }
 
