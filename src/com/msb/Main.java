@@ -12,7 +12,7 @@ import java.awt.event.WindowEvent;
  */
 public class Main {
     //main
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         TankFrame tf = new TankFrame();
     }
 }
